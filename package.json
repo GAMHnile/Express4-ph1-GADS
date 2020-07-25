@@ -1,0 +1,27 @@
+{
+  "name": "express4",
+  "version": "1.0.0",
+  "description": "full stack express app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GAMHnile/Express4-ph1-GADS.git"
+  },
+  "author": "GAMHnile",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GAMHnile/Express4-ph1-GADS/issues"
+  },
+  "homepage": "https://github.com/GAMHnile/Express4-ph1-GADS#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "chalk": "^4.1.0",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "morgan": "^1.10.0"
+  }
+}
