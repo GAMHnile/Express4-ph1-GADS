@@ -30,6 +30,11 @@
           <a href=<%=navItem.link  %>><%=navItem.title  %> </a>
         </li>
       <% }) %> 
+      <% if (isSignedin) { %>
+        <li>
+          <a href ="/auth/signout">SignOut</a>
+        </li>
+      <% } %>    
       </ul>
       <ul class="nav navbar-right navbar-nav">
         <li class="dropdown">

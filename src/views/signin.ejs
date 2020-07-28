@@ -6,10 +6,10 @@
 		<title>Storystrap Template</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -91,10 +91,11 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <form action="/auth/signUp" method="POST">
+              Signin or <a href="/">Signup</a>
+              <form action="/auth/signin" method="POST">
                 Username: <input name="username" id="username" >
                 Password: <input type="password" id="password" name="password">
-                <input type="submit" value="signup">
+                <input type="submit" value="signin">
               </form>
             </div>
           </div>
@@ -154,6 +155,6 @@
 </footer>
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
 	</body>
 </html>

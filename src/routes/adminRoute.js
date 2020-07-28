@@ -61,15 +61,16 @@ const router = () => {
   adminRouter
     .get('/', (req, res) => {
       (async function mongo() {
+        let client;
         try {
-          const client = await MongoClient.connect(url);
+          client = await MongoClient.connect(url);
           const db = client.db(dbName);
           const response = await db.collection('books').insertMany(books);
           res.json(response);
-          await client.close();
         } catch (err) {
           debug(err.stack);
         }
+        await client.close();
       }());
     });
   return adminRouter;

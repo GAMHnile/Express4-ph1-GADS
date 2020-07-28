@@ -45,12 +45,15 @@ app.use('/books', bookRouter);
 app.use('/admin', adminRouter);
 app.use('/auth', authRouter);
 
-app.get('/', (req, res) => {
+app.get('/', (req, res, next) => {
+  if (req.user) {
+    res.redirect('/books');
+  } else {
+    next();
+  }
+}, (req, res) => {
   res.render('index', {
-    nav: [
-      { title: 'Books', link: '/books' },
-      { title: 'Authors', link: '/authors' }
-    ],
+    nav,
     title: 'Library'
   });
 });
