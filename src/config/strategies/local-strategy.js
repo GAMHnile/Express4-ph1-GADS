@@ -1,6 +1,7 @@
 const { Strategy } = require('passport-local');
 const passport = require('passport');
 const { MongoClient } = require('mongodb');
+const debug = require('debug')('app:local-strategy');
 
 const url = 'mongodb://localhost:27017';
 const dbName = 'libraryApp';
@@ -24,7 +25,7 @@ module.exports = function localStrategy() {
             done(null, false);
           }
         } catch (err) {
-          console.log(err);
+          debug(err);
         }
         client.close();
       }());
